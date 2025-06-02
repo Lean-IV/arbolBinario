@@ -8,7 +8,7 @@ typedef struct Arbol* ArbolPtr;
 /**
  * Crea un nuevo nodo con el dato proporcionado.
  * pre: -
- * post: Devuelve un nuevo nodo con el valor dado, hijos NULL.
+ * post: Devuelve un nuevo nodo con el valor: "int dato", "hijos NULL".
  */
 ArbolPtr crearArbol(int dato);
 
@@ -19,7 +19,7 @@ ArbolPtr crearArbol(int dato);
  */
 void insertar(ArbolPtr arbol, int dato);
 
-// Getters
+/// Getters
 
 /**
  * Devuelve el dato almacenado en el nodo.
@@ -42,10 +42,10 @@ ArbolPtr obtenerIzq(ArbolPtr arbol);
  */
 ArbolPtr obtenerDer(ArbolPtr arbol);
 
-// Setters
+/// Setters
 
 /**
- * Asigna un valor al nodo.
+ * Asigna un nuevo valor al nodo.
  * pre: arbol ≠ NULL
  * post: El nodo contiene el nuevo dato.
  */
@@ -65,24 +65,24 @@ void setIzq(ArbolPtr arbol, ArbolPtr izq);
  */
 void setDer(ArbolPtr arbol, ArbolPtr der);
 
-// Recorridos secuenciales
+/// Recorridos secuenciales
 
 /**
- * Recorre el árbol en preorden, ejecutando tareaPesada en cada nodo.
+ * Recorre el árbol en preorden, ejecutando tareaPesada() en cada nodo.
  * pre: Puede ser NULL.
  * post: Se visitan todos los nodos en orden preorden.
  */
 void preOrder(ArbolPtr arbol);
 
 /**
- * Recorre el árbol en inorden, ejecutando tareaPesada en cada nodo.
+ * Recorre el árbol en inorden, ejecutando tareaPesada() en cada nodo.
  * pre: Puede ser NULL.
  * post: Se visitan todos los nodos en orden inorden.
  */
 void inOrder(ArbolPtr arbol);
 
 /**
- * Recorre el árbol en postorden, ejecutando tareaPesada en cada nodo.
+ * Recorre el árbol en postorden, ejecutando tareaPesada() en cada nodo.
  * pre: Puede ser NULL.
  * post: Se visitan todos los nodos en orden postorden.
  */
