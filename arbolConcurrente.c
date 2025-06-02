@@ -6,19 +6,13 @@
 
 #include "arbol.h"
 
-#ifdef _WIN32
 #include <windows.h>
+
 int obtenerCantidadNucleos() {
     SYSTEM_INFO sysinfo;
     GetSystemInfo(&sysinfo);
     return sysinfo.dwNumberOfProcessors;
 }
-#else
-#include <unistd.h>
-int obtenerCantidadNucleos() {
-    return sysconf(_SC_NPROCESSORS_ONLN);
-}
-#endif
 
 typedef struct {
     ArbolPtr arbol;
